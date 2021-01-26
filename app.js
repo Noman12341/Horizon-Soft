@@ -17,8 +17,6 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging')
         res.sendFile(path.join(__dirname + '/client/build/index.html'));
     });
 }
-// below Function runs every day midnight
-// var job = schedule.scheduleJob('0 0 * * *', CheckAution());
 
 app.listen(PORT, () => {
     console.log("server is running at port " + PORT);

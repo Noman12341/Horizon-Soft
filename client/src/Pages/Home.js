@@ -6,14 +6,18 @@ import OurTeam from '../Sections/OurTeam';
 import JoinUs from '../Sections/JoinUs';
 import ContactUs from '../Sections/ContactUs';
 import Reviews from '../Sections/Reviews';
+import Tech from '../Sections/Technologies';
+import WhyChoose from '../Sections/WhyHorizon';
 
 function Home() {
     return <div>
         <Banner />
+        <WhyChoose />
         <AboutUs />
         <Services />
         <JoinUs />
         <OurTeam />
+        <Tech />
         <Reviews />
         <ContactUs />
     </div>

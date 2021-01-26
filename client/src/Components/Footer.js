@@ -1,10 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../Images/horizon-logo.png';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 function Footer() {
+
+    const currLocation = useLocation().pathname;
+
+    // if pathname cantains admin then show nothing
+    if (currLocation.includes("/admin")) return null;
     return <Container id="footer" fluid>
         <Row>
             <Col lg={3}>

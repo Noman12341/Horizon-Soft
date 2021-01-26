@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import TopContainer from '../Components/TopContainer';
 import ContactUs from '../Sections/ContactUs';
 import GoogleMapReact from 'google-map-react';
 import { FaMapMarkerAlt } from 'react-icons/fa'
 function ContactPage() {
 
-    const [mapProps, setMapProps] = useState({
+    const mapProps = {
         center: {
             lat: 33.720000,
             lng: 73.060000
         },
         zoom: 11
-    });
+    }
 
     return <div>
         <TopContainer bigTitle="Contact Us" currPage="Contact" />
