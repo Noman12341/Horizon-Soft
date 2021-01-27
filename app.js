@@ -1,11 +1,24 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const path = require('path');
-
 
 // inittiozing express server
 const app = express();
 
+// middlewares
 app.use(express.json());
+
+// connecting with mongodb Atlus
+mongoose.connect("mongodb+srv://Noman12341:62ra6ARLF9MzhYPM@horizon-soft-cluster-ma.erthu.mongodb.net/HorizonSoftDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false })
+    .then(() => {
+        console.log("MongoDB is connected.");
+    }).catch(err => {
+        throw err;
+    });
+
+// Using routes
+app.use("/admin", require('./Routes/Admin'));
+
 
 // Assiging port number
 const PORT = process.env.PORT || 4000;
