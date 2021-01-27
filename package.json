@@ -1,7 +1,7 @@
 {
   "name": "horizon-soft-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is the main website of horizon soft company.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.13",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.17"
   }
 }

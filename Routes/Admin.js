@@ -5,6 +5,7 @@ const User = require('../Modals/User');
 const Review = require('../Modals/Review');
 const Member = require('../Modals/Member');
 const upload = require('../Funtions/MulterInit');
+const nodemailer = require('nodemailer');
 // below are the get sections
 
 // router for fetch the services
@@ -105,4 +106,33 @@ router.post("/add-member", upload.single('image'), async (req, res) => {
         return res.sendStatus(200);
     });
 });
+
+// send email from main user page
+router.post("/send-email", async (req, res) => {
+    const { name, email, subject, msg } = req.body;
+    console.log(req.body);
+    // now ready to send getEmails
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'mytestingemail12341@gmail.com',
+            pass: 'hkzrrzlublcbhclj'
+        }
+    });
+    var mailOptions = {
+        from: 'mytestingemail12341@gmail.com',
+        to: 'nomanfaisal12341@gmail.com',
+        subject: subject,
+        text: "name: " + name + "\nemail: " + email + "\nMessage: " + msg,
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            return res.status(400).json({ error: "Unable to send email." });
+        } else {
+            return res.sendStatus(200);
+        }
+    });
+});
+
 module.exports = router;
