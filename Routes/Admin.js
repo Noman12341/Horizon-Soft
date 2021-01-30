@@ -57,12 +57,12 @@ router.post("/add-user", async (req, res) => {
 });
 
 // route for adding service in db
-router.post("/add-service", upload.single('image'), async (req, rse) => {
+router.post("/add-service", upload.single('image'), async (req, res) => {
     const { title, text } = req.body;
     const newService = new Service({
         title,
         text,
-        img: req.file.fieldname
+        img: req.file.filename
     });
     newService.save(err => {
         if (err) return res.status(400).json({ error: "Unable to save data in DB." });

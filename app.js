@@ -18,6 +18,7 @@ mongoose.connect("mongodb+srv://Noman12341:62ra6ARLF9MzhYPM@horizon-soft-cluster
 
 // Using routes
 app.use("/admin", require('./Routes/Admin'));
+app.use("/static", express.static(path.join(__dirname + '/Public')));
 
 
 // Assiging port number
