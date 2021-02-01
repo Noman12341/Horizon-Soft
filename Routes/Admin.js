@@ -6,6 +6,7 @@ const Review = require('../Modals/Review');
 const Member = require('../Modals/Member');
 const upload = require('../Funtions/MulterInit');
 const nodemailer = require('nodemailer');
+const fs = require('fs');
 // below are the get sections
 
 // router for fetch the services
@@ -132,6 +133,38 @@ router.post("/send-email", async (req, res) => {
         } else {
             return res.sendStatus(200);
         }
+    });
+});
+// Delete Routes below
+router.delete("/delete-member/:id/:img", async (req, res) => {
+    await Member.deleteOne({ _id: req.params.id }, err => {
+        if (err) return res.sendStatus(400);
+        fs.unlink("Public/images/" + req.params.img, err => {
+            if (err) return res.sendStatus(400);
+            return res.sendStatus(200);
+        });
+    });
+});
+
+// router for delete Service
+router.delete("/delete-service/:id/:img", async (req, res) => {
+    await Service.deleteOne({ _id: req.params.id }, err => {
+        if (err) return res.sendStatus(400);
+        fs.unlink("Public/images/" + req.params.img, err => {
+            if (err) return res.sendStatus(400);
+            return res.sendStatus(200);
+        });
+    });
+});
+
+// router for delete Reviews
+router.delete("/delete-review/:id/:img", async (req, res) => {
+    await Review.deleteOne({ _id: req.params.id }, err => {
+        if (err) return res.sendStatus(400);
+        fs.unlink("Public/images/" + req.params.img, err => {
+            if (err) return res.sendStatus(400);
+            return res.sendStatus(200);
+        });
     });
 });
 

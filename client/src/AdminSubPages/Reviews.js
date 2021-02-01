@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Col, Table, Button, Modal, Form, Image } from 'react-bootstrap';
 import axios from 'axios';
+import { FaTrash } from 'react-icons/fa';
+
 function AdminReviews() {
 
 
@@ -14,7 +16,7 @@ function AdminReviews() {
         rating: ""
     });
     const [img, setImg] = useState(null);
-
+    const [run, setRun] = useState(false);
     useEffect(() => {
         const getMembers = async () => {
             await axios.get("/admin/get-reviews")
@@ -25,7 +27,7 @@ function AdminReviews() {
                 });
         }
         getMembers();
-    }, []);
+    }, [run]);
 
 
     const handleChange = e => {
@@ -61,13 +63,23 @@ function AdminReviews() {
                 });
                 setImg(null);
                 setIsLoading(false);
+                setRun(!run);
                 setShow(false);
             }).catch(error => {
                 setIsLoading(false);
                 throw error;
             });
     }
-
+    // handle Delete
+    const handleDelete = async (id, img) => {
+        window.confirm("Are u sure u want to delete ?") &&
+            await axios.delete('/admin/delete-review/' + id + "/" + img)
+                .then(res => {
+                    setRun(!run);
+                }).catch(error => {
+                    throw error;
+                });
+    }
     return <Container>
         <Card className="mt-5">
             <Card.Header>
@@ -84,6 +96,7 @@ function AdminReviews() {
                             <th>Image</th>
                             <th>Review</th>
                             <th>Rating</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,6 +107,7 @@ function AdminReviews() {
                             <td><Image src={"/static/images/" + r.img} height="70" width="70" /></td>
                             <td>{r.review}</td>
                             <td>{String(r.rating)}</td>
+                            <td><Button type="button" variant="primary" onClick={() => handleDelete(r._id, r.img)} size="sm"><FaTrash /></Button></td>
                         </tr>
                         ))}
                     </tbody>

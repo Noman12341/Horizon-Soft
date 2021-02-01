@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Col, Table, Button, Modal, Form, Image } from 'react-bootstrap';
 import axios from 'axios';
+import { FaTrash } from 'react-icons/fa';
 
 function AdminServices() {
 
@@ -12,7 +13,7 @@ function AdminServices() {
         title: "",
         text: ""
     });
-
+    const [run, setRun] = useState(false);
     const [img, setImg] = useState(null);
 
     useEffect(() => {
@@ -25,7 +26,7 @@ function AdminServices() {
                 });
         }
         getMembers();
-    }, []);
+    }, [run]);
 
 
     const handleChange = e => {
@@ -56,6 +57,7 @@ function AdminServices() {
                 });
                 setImg(null);
                 setIsLoading(false);
+                setRun(!run);
                 setShow(false);
             }).catch(error => {
                 setIsLoading(false);
@@ -63,7 +65,16 @@ function AdminServices() {
             });
     }
 
-
+    // handle Delete
+    const handleDelete = async (id, img) => {
+        window.confirm("Are u sure u want to delete ?") &&
+            await axios.delete('/admin/delete-service/' + id + "/" + img)
+                .then(res => {
+                    setRun(!run);
+                }).catch(error => {
+                    throw error;
+                });
+    }
     return <Container>
         <Card className="mt-5">
             <Card.Header>
@@ -78,6 +89,7 @@ function AdminServices() {
                             <th>Title</th>
                             <th>Image</th>
                             <th>Text</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,6 +99,7 @@ function AdminServices() {
                                 <td>{service.title}</td>
                                 <td><Image src={"/static/images/" + service.img} height="70" width="70" /></td>
                                 <td>{service.text}</td>
+                                <td><Button type="button" variant="primary" onClick={() => handleDelete(service._id, service.img)} size="sm"><FaTrash /></Button></td>
                             </tr>
                         })}
 

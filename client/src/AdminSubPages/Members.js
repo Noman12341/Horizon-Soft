@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Col, Table, Button, Modal, Form, Image } from 'react-bootstrap';
 import axios from 'axios';
-
+import { FaTrash } from 'react-icons/fa';
 function AdminMembers() {
 
     const [show, setShow] = useState(false);
@@ -16,7 +16,7 @@ function AdminMembers() {
         twitterLink: "",
     });
     const [img, setImg] = useState(null);
-
+    const [run, setRun] = useState(false);
     useEffect(() => {
         const getMembers = async () => {
             await axios.get("/admin/get-members")
@@ -27,7 +27,7 @@ function AdminMembers() {
                 });
         }
         getMembers();
-    }, []);
+    }, [run]);
 
 
     const handleChange = e => {
@@ -65,12 +65,24 @@ function AdminMembers() {
                     twitterLink: "",
                 });
                 setIsLoading(false);
+                setRun(!run);
                 setShow(false);
             }).catch(error => {
                 setIsLoading(false);
                 throw error;
             });
     }
+    // handle Delete
+    const handleDelete = async (id, img) => {
+        window.confirm("Are u sure u want to delete ?") &&
+            await axios.delete('/admin/delete-member/' + id + "/" + img)
+                .then(res => {
+                    setRun(!run);
+                }).catch(error => {
+                    throw error;
+                });
+    }
+
     return <Container>
         <Card className="mt-5">
             <Card.Header>
@@ -85,6 +97,7 @@ function AdminMembers() {
                             <th>Name</th>
                             <th>Job</th>
                             <th>Image</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,6 +107,7 @@ function AdminMembers() {
                                 <td>{member.name}</td>
                                 <td>{member.job}</td>
                                 <td><Image src={"/static/images/" + member.img} height="70" width="70" /></td>
+                                <td><Button type="button" variant="primary" onClick={() => handleDelete(member._id, member.img)} size="sm"><FaTrash /></Button></td>
                             </tr>
                         })}
                     </tbody>
