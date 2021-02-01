@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import { FaPlus } from 'react-icons/fa';
 import SideBar from '../Components/AdminSideBar';
@@ -9,12 +10,17 @@ import AdminReviews from '../AdminSubPages/Reviews';
 import AdminMembers from '../AdminSubPages/Members';
 
 function AdminPage() {
+    const history = useHistory();
     const [show, setShow] = useState(true);
 
     const handleShow = () => {
         setShow(!show);
     }
 
+    const handleLogout = () => {
+        localStorage.clear();
+        history.push("/admin/auth");
+    }
     return <div className="d-flex">
         {show && <SideBar />}
         {/* below section is where the different subpages are shown */}
@@ -24,7 +30,7 @@ function AdminPage() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Button varient="primary">LogOut</Button>
+                        <Button varient="primary" type="button" onClick={handleLogout}>LogOut</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

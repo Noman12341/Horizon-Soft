@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Col, Table, Button, Modal, Form, Image } from 'react-bootstrap';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
 
 function AdminReviews() {
 
-
+    const history = useHistory()
     const [show, setShow] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [reviews, setReviews] = useState([]);
@@ -19,11 +20,11 @@ function AdminReviews() {
     const [run, setRun] = useState(false);
     useEffect(() => {
         const getMembers = async () => {
-            await axios.get("/admin/get-reviews")
+            await axios.get("/admin/get-reviews", { headers: { "x-auth-token": localStorage.getItem('token') } })
                 .then(res => {
                     setReviews(res.data.reviews);
                 }).catch(error => {
-                    throw error;
+                    history.push("/admin/auth");
                 });
         }
         getMembers();

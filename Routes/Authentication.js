@@ -4,6 +4,12 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../Modals/User');
+const auth = require('../Middleware/auth');
+
+// check auth
+router.get("/check-auth", auth, (req, res) => {
+    return res.sendStatus(200);
+});
 
 router.post("/login", async (req, res) => {
     const { email, password } = req.body;

@@ -7,10 +7,11 @@ const Member = require('../Modals/Member');
 const upload = require('../Funtions/MulterInit');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
+const auth = require('../Middleware/auth');
 // below are the get sections
 
 // router for fetch the services
-router.get("/get-services", async (req, res) => {
+router.get("/get-services", auth, async (req, res) => {
     await Service.find({}, (err, services) => {
         if (err) return res.status(400).json({ error: "Unable to get data." });
 
@@ -19,7 +20,7 @@ router.get("/get-services", async (req, res) => {
 });
 
 // route for fetch Members 
-router.get("/get-members", async (req, res) => {
+router.get("/get-members", auth, async (req, res) => {
     await Member.find({}, (err, members) => {
         if (err) return res.status(400).json({ error: "Unable to get data." });
 
@@ -27,7 +28,7 @@ router.get("/get-members", async (req, res) => {
     });
 });
 // router for fetch User
-router.get("/get-users", async (req, res) => {
+router.get("/get-users", auth, async (req, res) => {
     await User.find({}, (err, users) => {
         if (err) return res.status(400).json({ error: "Unable to get data." });
 
@@ -35,7 +36,7 @@ router.get("/get-users", async (req, res) => {
     });
 });
 // router for fetch Reviews
-router.get("/get-reviews", async (req, res) => {
+router.get("/get-reviews", auth, async (req, res) => {
     await Review.find({}, (err, reviews) => {
         if (err) return res.status(400).json({ error: "Unable to get data." });
 

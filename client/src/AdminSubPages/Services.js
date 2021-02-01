@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Col, Table, Button, Modal, Form, Image } from 'react-bootstrap';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
 
 function AdminServices() {
-
+    const history = useHistory();
     const [show, setShow] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [services, setServices] = useState([]);
@@ -18,11 +19,11 @@ function AdminServices() {
 
     useEffect(() => {
         const getMembers = async () => {
-            await axios.get("/admin/get-services")
+            await axios.get("/admin/get-services", { headers: { "x-auth-token": localStorage.getItem('token') } })
                 .then(res => {
                     setServices(res.data.services);
                 }).catch(error => {
-                    throw error;
+                    history.push("/admin/auth");
                 });
         }
         getMembers();
