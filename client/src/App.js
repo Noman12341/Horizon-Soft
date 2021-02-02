@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
 import AboutPage from './Pages/AboutPage';
 import Footer from './Components/Footer';
@@ -9,7 +8,7 @@ import ContactPage from './Pages/ContactPage';
 import TechPage from './Pages/TechPage';
 import AdminAuth from './Pages/AdminAuth';
 import AdminPage from './Pages/Admin';
-
+import NavBar from './Components/NavBar';
 function App() {
   return <Router>
     <NavBar />

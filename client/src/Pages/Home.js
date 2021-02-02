@@ -1,4 +1,5 @@
 import React from 'react';
+import MainBanner from '../Sections/MainBanner';
 import Banner from '../Components/Banner';
 import AboutUs from '../Sections/AboutUs';
 import Services from '../Sections/Services';
@@ -7,12 +8,12 @@ import JoinUs from '../Sections/JoinUs';
 import ContactUs from '../Sections/ContactUs';
 import Reviews from '../Sections/Reviews';
 import Tech from '../Sections/Technologies';
-import WhyChoose from '../Sections/WhyHorizon';
-
+// import WhyChoose from '../Sections/WhyHorizon';
 function Home() {
     return <div>
-        <Banner />
-        <WhyChoose />
+        {/* <Banner /> */}
+        <MainBanner />
+        {/* <WhyChoose /> */}
         <AboutUs />
         <Services />
         <JoinUs />
