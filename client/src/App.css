@@ -90,9 +90,9 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   display: block;
 }
 
-/*  */
+/*  Small Banner */
 #banner {
-  min-height: 800px;
+  min-height: 600px;
   position: relative;
   background-image: url('./Images/slider-1.jpg');
   background-repeat: no-repeat;
@@ -105,26 +105,34 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   content: "";
   left: 0;
   top: 0;
-  background: #333;
-  opacity: .6;
+  background: #000;
+  opacity: 0.7;
 }
-.banner-padding {
-  padding: 200px 0 0 50px;
+.banner-container {
+  padding: 200px 0 0 40px;
+  position: absolute;
+  max-width: 840px;
 }
 .banner-title {
   color: #fff;
-  line-height: 1;
-  letter-spacing: -3px;
-  font-size: 85px;
-  font-weight: 500;
-  margin-bottom: 30px;
+  font-size: 40px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 15px 0 25px;
+}
+.banner-little-heading {
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px 10px 4px;
+  background-color: #096bd8;
+  color: #fff;
 }
 #banner p{
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 18px;
   color: #fff;
-  margin-right: 232px;
+  line-height: 1.67;
   margin-bottom: 0;
 }
 /* Main banner */
@@ -208,6 +216,22 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 
 }
+/* New Service Card  */
+.service-box .card-title {
+  max-width: 260px;
+    margin-bottom: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: left;
+    color: #323232;
+    text-transform: capitalize;
+}.service-box p {
+  margin: 0 0 12px;
+    font-size: 13.5px;
+    line-height: 1.43;
+    text-align: left;
+}
 #services {
   padding: 100px 0;
   text-align: center;
@@ -286,6 +310,8 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
 }
 #our-team .team-card {
   margin-bottom: 24px;
+  margin-right: 22px;
+  width: 267px;
 }
 .team-card .card-body {
   padding: 22px 30px 40px;
@@ -541,6 +567,8 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
 #review-card {
   border: none;
   transition: .3s;
+  width: 367px;
+  margin-right: 18px;
 }
 #review-card:hover{
   box-shadow: 0 0 10px 10px rgba(139, 137, 137, 0.13);
@@ -555,6 +583,32 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   height: 272px;
   overflow: hidden;
 }
+.slider-main-container {
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+  max-width: 100%;
+}
+.slider-container {
+  display: flex;
+  padding: 14px;
+}
+.slider-main-container::-webkit-scrollbar{
+  display: none;
+}
+.arrow-btn {
+  border: 1px solid orange;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 17px;
+  transition: all .3s;
+}
+.arrow-btn:hover {
+  background-color: orange;
+  color: #fff;
+}
+/* clinets CSs */
 .client-rating {margin-bottom: 35px;}
 .client-rating svg{
   color: #ff9900;

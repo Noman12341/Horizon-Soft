@@ -5,6 +5,8 @@ import { FaChevronRight } from 'react-icons/fa';
 import Img1 from '../Images/slider-1.jpg';
 import Img2 from '../Images/main-banner-1.jpg';
 import Img3 from '../Images/main-banner-2.jpg';
+import SVGICon from '../Images/ai.svg';
+
 function MainBanner() {
     const [index, setIndex] = useState(0);
 
@@ -19,6 +21,7 @@ function MainBanner() {
                 src={Img1}
                 alt="First slide"
             />
+            <Image src={SVGICon} height="70" />
             <Carousel.Caption>
                 <h3>Dedicated Development Teams </h3>
                 <p>Hire top tech talent and quickly scale your delivery capacity. Our engineers have the necessary niche skills, deep expertise, and are highly loyal.</p>

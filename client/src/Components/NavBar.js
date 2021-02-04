@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Image } from 'react-bootstrap';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import logo from '../Images/horizon-logo.png';
+import logo from '../Images/logo-transparent.png';
 
 
 function NavBar() {

@@ -1,16 +1,12 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 function Banner() {
-    return <Container id="banner" fluid>
-        <Row>
-            <Col lg={8} className="banner-padding">
-                <h1 className="banner-title">Perfect IT Solutions For Your Business</h1>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque</p>
-                <div className="mt-5"><Link className="link-mid">Lern More</Link></div>
-            </Col>
-        </Row>
-    </Container>
+    return <section id="banner">
+        <div className="banner-container">
+            <div className="banner-little-heading">UI AND UX DESIGN</div>
+            <h1 className="banner-title">UI AND UX DESIGN SERVICES</h1>
+            <p>Want to build your product with a team that establishes a clear design process, meets deadlines, and delivers a spot-on end result? Turn to Intellectsoft’s UI and UX services. Our design team is a small design studio within a large software company that will help you build an engaging product easily and quickly.</p>
+        </div>
+    </section>
 }
 export default Banner;

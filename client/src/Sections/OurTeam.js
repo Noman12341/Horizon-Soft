@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import TeamCard from '../Components/team-card';
 import teamMem from '../Images/team-01.jpg';
+import MySlider from '../Components/MySlider';
 
 function OurTeam() {
     return <Container id="our-team" className="px-5" fluid>
@@ -12,12 +13,14 @@ function OurTeam() {
                 <h1 className="services-title">Meet Experience<br /> Team Member</h1>
             </Col>
         </Row>
-        <Row>
-            <Col lg={3}>
-                <TeamCard image={teamMem} name="Noman Faisal" profection="Web Developer" link1="/" link2="/" link3="/" link4="/" />
-            </Col>
+        <MySlider>
+            <TeamCard image={teamMem} name="Noman Faisal" profection="Web Developer" link1="/" link2="/" link3="/" link4="/" />
+            <TeamCard image={teamMem} name="Noman Faisal" profection="Web Developer" link1="/" link2="/" link3="/" link4="/" />
+            <TeamCard image={teamMem} name="Noman Faisal" profection="Web Developer" link1="/" link2="/" link3="/" link4="/" />
+            <TeamCard image={teamMem} name="Noman Faisal" profection="Web Developer" link1="/" link2="/" link3="/" link4="/" />
+            <TeamCard image={teamMem} name="Noman Faisal" profection="Web Developer" link1="/" link2="/" link3="/" link4="/" />
 
-        </Row>
+        </MySlider>
     </Container>
 }
 export default OurTeam;
