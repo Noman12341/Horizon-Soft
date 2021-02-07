@@ -8,11 +8,20 @@ import HybridMobile from '../Images/Hybrid-mobile.svg'
 import PrograssiveWeb from '../Images/prograssiveWeb.svg';
 import Wearable from '../Images/Wearable.svg';
 import MobTecBox from '../Components/MobileTechDiv';
+import ContactUs from '../Sections/ContactUs';
 // importing logos or icons
 import icon1 from '../Icons/1-1.png';
 import icon2 from '../Icons/1-3.png';
 import icon3 from '../Icons/1-5.png';
 import icon4 from '../Icons/1-6.png';
+import icon5 from '../Icons/2-1.png';
+import icon6 from '../Icons/2-2.png';
+import icon7 from '../Icons/3-1.png';
+import icon8 from '../Icons/3-2.png';
+import icon9 from '../Icons/3-4.png';
+import icon10 from '../Icons/3-5.png';
+import icon11 from '../Icons/4-2.png';
+import icon12 from '../Icons/4-3.png';
 function MobileApp() {
 
     const isoDev = [
@@ -27,6 +36,41 @@ function MobileApp() {
         { icon: icon2, name: "SwiftUI" },
         { icon: icon3, name: "RxSwift" },
         { icon: icon4, name: "SwiftLint" }
+    ]
+
+    const androidApp = [
+        "Android Mobile App Development",
+        "Android TV App Development",
+        "Android Tablet App Development",
+        "Android Wear App Development"
+    ]
+
+    const andAppLogos = [
+        { icon: icon5, name: "Kotlin" },
+        { icon: icon6, name: "Java" },
+    ]
+
+    const hybridApp = [
+        "Hybrid Mobile App Development",
+        "Hybrid Tablet App Development",
+        "Hybrid TV App Development"
+    ]
+    const hybridLogos = [
+        { icon: icon7, name: "React" },
+        { icon: icon8, name: "Flutter" },
+        { icon: icon9, name: "javaScript" },
+        { icon: icon10, name: "TypeScript" },
+    ]
+    const webApp = [
+        "Cross-browser Web App Development",
+        "Responsive Web App Development",
+        "Offline Web App Development"
+    ]
+
+    const webLogos = [
+        { icon: icon7, name: "React" },
+        { icon: icon11, name: "Angular" },
+        { icon: icon12, name: "Redux" }
     ]
     return <div>
         <Banner />
@@ -91,9 +135,22 @@ function MobileApp() {
                         text="We have all the expertise you need to produce fully-fledged, stable, and scalable mobile applications, including:"
                         logos={isoLogos}
                         points={isoDev} />
+                    <MobTecBox title="Android App Development"
+                        text="Using the latest technologies, we help businesses establish their presence on any modern device and platform, including:"
+                        logos={andAppLogos}
+                        points={androidApp} />
+                    <MobTecBox title="Cross-platform App Development"
+                        text="Get top-notch mobile applications that run on multiple platforms costs while providing your users with an app that fits their OS. Use this alternative to reduce costs and time-to-market and to reach more users without loss of quality, including:"
+                        logos={hybridLogos}
+                        points={hybridApp} />
+                    <MobTecBox title="Progressive Web App Development"
+                        text="Build Progressive Web Apps that combine the best technical solutions applied in mobile and web applications beneficial in terms of the ease of development and distribution, as well as a number of other advantages for your business. Talk to our experts to discuss:"
+                        logos={webLogos}
+                        points={webApp} />
                 </div>
             </Container>
         </section>
+        <ContactUs />
     </div>
 }
 export default MobileApp;

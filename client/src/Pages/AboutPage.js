@@ -1,7 +1,7 @@
 import React from 'react';
 import TopContainer from '../Components/TopContainer';
 import AboutUs from '../Sections/AboutUs';
-import Services from '../Sections/Services';
+import NewServices from '../Sections/NewServices';
 import OurTeam from '../Sections/OurTeam';
 import JoinUs from '../Sections/JoinUs';
 import ContactUs from '../Sections/ContactUs';
@@ -11,7 +11,7 @@ function AboutPage() {
     return <div>
         <TopContainer bigTitle="About Us" currPage="About" />
         <AboutUs />
-        <Services />
+        <NewServices />
         <JoinUs />
         <OurTeam />
         <Reviews />

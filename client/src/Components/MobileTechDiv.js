@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col, Image } from 'react-bootstrap';
-import icon1 from '../Icons/1-1.png';
 
 function MobileAppDiv({ title, text, logos, points }) {
     return <div className="mob-tec-box">

@@ -232,33 +232,7 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
 
 }
 /* New Service Card  */
-.service-box .card-title {
-  max-width: 260px;
-    margin-bottom: 13px;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1;
-    text-align: left;
-    color: #323232;
-    text-transform: capitalize;
-}.service-box p {
-  margin: 0 0 12px;
-    font-size: 13.5px;
-    line-height: 1.43;
-    text-align: left;
-}
-#services {
-  padding: 100px 0;
-  text-align: center;
-  background-image: url('./Images/bg-1.jpg');
-  min-height: 400px;
-}
-#services span {
-  color:#096bd8;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
+
 .span-border {
   margin: 0 10px;
   height: 3px;
@@ -267,52 +241,6 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   background: #096bd8;
   position: relative;
   top: -3px;
-}
-.services-title {
-  font-size: 45px;
-  font-weight: 500;
-  margin-top: 21px;
-}
-.service-card {
-  border: none;
-  padding: 60px 30px;
-  border-radius: 10px;
-  margin-bottom: 24px;
-  transition: .3s;
-}
-.service-card:hover{
-  transform: translate(0,-14px);
-  box-shadow: 0 0 10px 10px rgba(139, 137, 137, 0.13);
-}
-.service-card .card-title{
-  font-size: 24px;
-  margin-top: 23px;
-  margin-bottom: 21px;
-  font-weight: 600;
-}
-.service-card p{
-  margin: 0;
-  line-height: 30px;
-  font-size: 15px;
-  font-weight: 400;
-  color: #696969;
-}
-.card-link {
-  display: inline-block;
-  border: 2px solid #ececec;
-  padding: 13px 29px;
-  border-radius: 5px;
-  margin-top: 24px;
-  position: relative;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: capitalize;
-  transition: .3s;
-}
-.card-link:hover{
-  color:  #fff;
-  background:#096bd8;
-  border-color: #096bd8;
 }
 #our-team {
   padding: 100px 0;
@@ -900,8 +828,9 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
 }
 
 .mob-tec-box {
-  box-shadow: 0 3px 15px rgb(0 0 0 / 6%);
+  box-shadow: 0 3px 15px rgb(0 0 0 / 20%);
   padding: 40px;
+  margin-bottom: 20px;
 }
 .mob-tec-title {
   font-size: 24px;
@@ -937,4 +866,71 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   opacity: .6;
   font-size: 12px;
   line-height: 28px;
+}
+#new-services {
+  padding: 80px 0;
+  background-image: url('./Images/bg-1.jpg');
+}
+.service-tabs {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.service-tab {
+  max-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  color: #096bd8;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #096bd8;
+}
+#new-service-card {
+  color: #000;
+  padding: 30px 20px 0 0;
+  border-radius: 0;
+  min-width: 300px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  border: none;
+  min-height: 190px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+/* span for small header */
+.span-header {
+  color: #096bd8;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#new-service-card:hover {
+  background-color: rgba(20,118,242,.8);
+  color: #fff;
+}
+#new-service-card:hover img{
+  transform: scale(1.2);
+  transition: all .3s;
+}
+#new-service-card .card-title {
+  max-width: 260px;
+  margin-bottom: 13px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: left;
+}
+#new-service-card p {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  line-height: 1.43;
+}
+.s-card-link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+}
+.s-card-link:hover{
+  color: #fff;
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import TopContainer from '../Components/TopContainer';
-import ServicesCollection from '../Sections/Services';
+import NewServices from '../Sections/NewServices';
 import ContactUs from '../Sections/ContactUs';
 function Services() {
     return <div>
         <TopContainer bigTitle="Services" currPage="Services" />
-        <ServicesCollection />
+        <NewServices />
         <ContactUs />
     </div>
 }
