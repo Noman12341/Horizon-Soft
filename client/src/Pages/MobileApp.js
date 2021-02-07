@@ -73,7 +73,9 @@ function MobileApp() {
         { icon: icon12, name: "Redux" }
     ]
     return <div>
-        <Banner />
+        <Banner smallHeading="Mobile App"
+            bigHeading="DELIVERING STELLAR MOBILE APP DEVELOPMENT SERVICES"
+            text="We help global brands design and build superior digital products, enabling seamless user experiences across all modern platforms and devices." />
         <section className="mobile-heading">
             <Container>
                 <div>
