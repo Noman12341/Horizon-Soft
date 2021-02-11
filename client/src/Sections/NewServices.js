@@ -21,7 +21,7 @@ function NewServices() {
             <Row>
                 <Col lg={4} className="px-0">
                     <NewServiceCard svg={icon1}
-                        title="Enterprise Software Development"
+                        title="Custom Software Development" path="/custom-dev"
                         text="Create complex enterprise software, ensure reliable software integration, modernise your legacy system." />
                 </Col>
                 <Col lg={4} className="px-0">
@@ -32,11 +32,11 @@ function NewServices() {
                 <Col lg={4} className="px-0">
                     <NewServiceCard svg={icon3}
                         title="Dedicated Development Team"
-                        text="Hire a loyal software development team with niche skills and deep expertise. " />
+                        text="Hire a loyal software development team with niche skills and deep expertise." />
                 </Col>
                 <Col lg={4} className="px-0">
                     <NewServiceCard svg={icon4}
-                        title="IT Consulting"
+                        title="Product Development"
                         text="Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios." />
                 </Col>
                 <Col lg={4} className="px-0">

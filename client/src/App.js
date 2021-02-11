@@ -11,6 +11,7 @@ import AdminPage from './Pages/Admin';
 import NavBar from './Components/NavBar';
 import DeisgnPage from './Pages/UIUXDesgin';
 import MobileAppPage from './Pages/MobileApp';
+import CustomSoftPage from './Pages/CustomSoftDev';
 
 function App() {
   return <Router>
@@ -22,6 +23,7 @@ function App() {
       <Route path="/services" exact component={Services} />
       <Route path="/contact" exact component={ContactPage} />
       <Route path="/mobile-app" exact component={MobileAppPage} />
+      <Route path="/custom-dev" exact component={CustomSoftPage} />
       <Route path="/design" exact component={DeisgnPage} />
       <Route path="/admin/auth" exact component={AdminAuth} />
       <Route path="/admin" component={AdminPage} />
