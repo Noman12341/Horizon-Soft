@@ -10,7 +10,7 @@ import img6 from '../Icons/TechSVG/database.svg';
 import img7 from '../Icons/TechSVG/testing.svg';
 
 function TechStack() {
-    return <section>
+    return <section className="pt-4">
         <div className="section-heading">
             <h2>TOOLS & TECHNOLOGIES WE USE</h2>
             <p>Intellectsoft has grown into an international contestant in enterprise application development services with wide-ranging expertise in all areas needed for reliable software development.</p>
