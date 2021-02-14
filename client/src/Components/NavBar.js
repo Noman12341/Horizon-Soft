@@ -33,7 +33,7 @@ function NavBar() {
                         <li><Link to="/">Mobile App development</Link></li>
                     </ul>
                 </NavLink>
-                <NavLink exact to="/contact" activeClassName="active-nav" className="nav-link">Contact</NavLink>
+                <Link to="/contact-us" className="contact-link">Contact</Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>

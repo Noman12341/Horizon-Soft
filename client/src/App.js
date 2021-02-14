@@ -13,6 +13,7 @@ import DeisgnPage from './Pages/UIUXDesgin';
 import MobileAppPage from './Pages/MobileApp';
 import CustomSoftPage from './Pages/CustomSoftDev';
 import DedicatedTeamPage from './Pages/DedicatedPage';
+import ContactUsPage from './Pages/ContactUsPage';
 
 function App() {
   return <Router>
@@ -27,6 +28,7 @@ function App() {
       <Route path="/custom-dev" exact component={CustomSoftPage} />
       <Route path="/dedicated-development" exact component={DedicatedTeamPage} />
       <Route path="/design" exact component={DeisgnPage} />
+      <Route path="/contact-us" exact component={ContactUsPage} />
       <Route path="/admin/auth" exact component={AdminAuth} />
       <Route path="/admin" component={AdminPage} />
     </Switch>

@@ -5,7 +5,7 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter, FaEnvelope } from 'react-icons/fa
 function TeamCard(props) {
     const { image, name, profection, link1, link2, link3, link4 } = props;
     return <Card className="team-card">
-        <div><Image src={image} height="274" width="100%" /></div>
+        <div><Image src={"/static/images/" + image} height="274" width="100%" /></div>
         <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>{profection}</Card.Text>
