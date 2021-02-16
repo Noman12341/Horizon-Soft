@@ -9,7 +9,7 @@ function NewServiceCard({ svg, title, text, path }) {
                 <div>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{text}</Card.Text>
-                    <Link className="s-card-link" to={path}>Read more</Link>
+                    <div className="s-card-link">Read more</div>
                 </div>
             </div>
         </Card>

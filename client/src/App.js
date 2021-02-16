@@ -7,6 +7,7 @@ import Services from './Pages/Services';
 import ContactPage from './Pages/ContactPage';
 import TechPage from './Pages/TechPage';
 import AdminAuth from './Pages/AdminAuth';
+import WebAppPage from './Pages/WebAppPage';
 import AdminPage from './Pages/Admin';
 import NavBar from './Components/NavBar';
 import DeisgnPage from './Pages/UIUXDesgin';
@@ -24,7 +25,8 @@ function App() {
       <Route path="/about" exact component={AboutPage} />
       <Route path="/services" exact component={Services} />
       <Route path="/contact" exact component={ContactPage} />
-      <Route path="/mobile-app" exact component={MobileAppPage} />
+      <Route path="/web-app-development" exact component={WebAppPage} />
+      <Route path="/mobile-app-development" exact component={MobileAppPage} />
       <Route path="/custom-dev" exact component={CustomSoftPage} />
       <Route path="/dedicated-development" exact component={DedicatedTeamPage} />
       <Route path="/design" exact component={DeisgnPage} />

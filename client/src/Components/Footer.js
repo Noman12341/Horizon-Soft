@@ -24,23 +24,23 @@ function Footer() {
             <Col lg={3}>
                 <h4 className="footer-title">Our Services</h4>
                 <ul className="footer-menu">
-                    <li><Link>User Strategy</Link></li>
-                    <li><Link>Product Designs</Link></li>
-                    <li><Link>Marketing Strategy</Link></li>
-                    <li><Link>IT Consultancy</Link></li>
-                    <li><Link>Server Security</Link></li>
-                    <li><Link>Product Marketing</Link></li>
+                    <li><Link to="/">User Strategy</Link></li>
+                    <li><Link to="/">Product Designs</Link></li>
+                    <li><Link to="/">Marketing Strategy</Link></li>
+                    <li><Link to="/">IT Consultancy</Link></li>
+                    <li><Link to="/">Server Security</Link></li>
+                    <li><Link to="/">Product Marketing</Link></li>
                 </ul>
             </Col>
             <Col lg={3}>
                 <h4 className="footer-title">Quick Links</h4>
                 <ul className="footer-menu">
-                    <li><Link>About Us</Link></li>
-                    <li><Link>Need a Consultant ?</Link></li>
-                    <li><Link>Our Services</Link></li>
-                    <li><Link>Have any Question ?</Link></li>
-                    <li><Link>Meet Our Team</Link></li>
-                    <li><Link>Contact Us</Link></li>
+                    <li><Link to="/">About Us</Link></li>
+                    <li><Link to="/">Need a Consultant ?</Link></li>
+                    <li><Link to="/">Our Services</Link></li>
+                    <li><Link to="/">Have any Question ?</Link></li>
+                    <li><Link to="/">Meet Our Team</Link></li>
+                    <li><Link to="/">Contact Us</Link></li>
                 </ul>
             </Col>
             <Col lg={3}>

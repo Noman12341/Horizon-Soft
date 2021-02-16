@@ -23,16 +23,16 @@ function NavBar() {
                 <NavLink exact to="/" activeClassName="active-nav" className="nav-link">Home</NavLink>
                 <NavLink exact to="/tech" activeClassName="active-nav" className="nav-link">Technologies</NavLink>
                 <NavLink exact to="/about" activeClassName="active-nav" className="nav-link">About</NavLink>
-                <NavLink exact to="/services" activeClassName="active-nav" className="nav-link ser-drop-down">
+                <div className="nav-link ser-drop-down">
                     Services
                     <ul className="ser-drop-down-cont">
                         <li><Link to="/custom-dev">Custom Software Dev</Link></li>
-                        <li><Link to="/mobile-app">Mobile App Development</Link></li>
-                        <li><Link to="/">Web App Development</Link></li>
+                        <li><Link to="/mobile-app-development">Mobile App Development</Link></li>
+                        <li><Link to="web-app-development">Web App Development</Link></li>
                         <li><Link to="/dedicated-development">Dedicated Team Dev</Link></li>
-                        <li><Link to="/">Mobile App development</Link></li>
+                        <li><Link to="/mobile-app-development">Mobile App development</Link></li>
                     </ul>
-                </NavLink>
+                </div>
                 <Link to="/contact-us" className="contact-link">Contact</Link>
             </Nav>
         </Navbar.Collapse>
