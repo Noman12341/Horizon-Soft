@@ -30,12 +30,12 @@ function NewServices() {
                         text="Create an impactful mobile app that fits your brand and industry within a shorter time frame." />
                 </Col>
                 <Col lg={4} className="px-0">
-                    <NewServiceCard svg={icon3} path="/"
+                    <NewServiceCard svg={icon3} path="/dedicated-development"
                         title="Dedicated Development Team"
                         text="Hire a loyal software development team with niche skills and deep expertise." />
                 </Col>
                 <Col lg={4} className="px-0">
-                    <NewServiceCard svg={icon4} path="/"
+                    <NewServiceCard svg={icon4} path="/product-development-page"
                         title="Product Development"
                         text="Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios." />
                 </Col>
@@ -45,7 +45,7 @@ function NewServices() {
                         text="Revolutionize your business ideas using web development services for innovative and next-gen applications." />
                 </Col>
                 <Col lg={4} className="px-0">
-                    <NewServiceCard svg={icon6} path="/"
+                    <NewServiceCard svg={icon6} path="/testing-and-QA"
                         title="QA & Testing"
                         text="Turn to our experts to perform comprehensive, multi-stage testing and auditing of your software." />
                 </Col>

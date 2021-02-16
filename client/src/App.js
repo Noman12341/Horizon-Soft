@@ -5,6 +5,8 @@ import AboutPage from './Pages/AboutPage';
 import Footer from './Components/Footer';
 import Services from './Pages/Services';
 import ContactPage from './Pages/ContactPage';
+import ProductDevPage from './Pages/ProductDevPage';
+import TestingAndQA from './Pages/Testing&QA';
 import TechPage from './Pages/TechPage';
 import AdminAuth from './Pages/AdminAuth';
 import WebAppPage from './Pages/WebAppPage';
@@ -25,6 +27,8 @@ function App() {
       <Route path="/about" exact component={AboutPage} />
       <Route path="/services" exact component={Services} />
       <Route path="/contact" exact component={ContactPage} />
+      <Route path="/product-development-page" exact component={ProductDevPage} />
+      <Route path="/testing-and-QA" exact component={TestingAndQA} />
       <Route path="/web-app-development" exact component={WebAppPage} />
       <Route path="/mobile-app-development" exact component={MobileAppPage} />
       <Route path="/custom-dev" exact component={CustomSoftPage} />

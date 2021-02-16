@@ -28,9 +28,10 @@ function NavBar() {
                     <ul className="ser-drop-down-cont">
                         <li><Link to="/custom-dev">Custom Software Dev</Link></li>
                         <li><Link to="/mobile-app-development">Mobile App Development</Link></li>
-                        <li><Link to="web-app-development">Web App Development</Link></li>
+                        <li><Link to="/web-app-development">Web App Development</Link></li>
                         <li><Link to="/dedicated-development">Dedicated Team Dev</Link></li>
-                        <li><Link to="/mobile-app-development">Mobile App development</Link></li>
+                        <li><Link to="/product-development-page">Product Development</Link></li>
+                        <li><Link to="/testing-and-QA">Testing & QA</Link></li>
                     </ul>
                 </div>
                 <Link to="/contact-us" className="contact-link">Contact</Link>
