@@ -1,8 +1,38 @@
-import React from 'react';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import axios from 'axios';
 
 function ContactUsPage() {
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phoneNo: "",
+        country: "",
+        description: ""
+    });
+    const [isLoading, setIsLoading] = useState(false);
+    const [alert, setAlert] = useState({
+        msg: "",
+        type: ""
+    });
+    const handleChange = event => {
+        setForm({ ...form, [event.target.name]: event.target.value });
+    }
+
+    const handleSubmit = async event => {
+        event.preventDefault();
+        setIsLoading(true);
+        await axios.post("/api/main/send-email", { ...form })
+            .then(() => {
+                setAlert({ msg: "Your Email has been sent.", type: "success" });
+                setIsLoading(false);
+            }).catch(() => {
+                setAlert({ msg: "Sorry! Unable to send email.", type: "danger" })
+                setIsLoading(false);
+            });
+    }
+
     return <main>
         <section className="contact-container">
             <Container fluid>
@@ -20,25 +50,26 @@ function ContactUsPage() {
                     <Col lg={6}>
                         <Card style={{ borderRadius: "0" }}>
                             <Card.Body style={{ padding: "30px" }}>
+                                {alert.msg && <Alert variant={alert.type} onClose={() => setAlert({ msg: "", type: "" })} dismissible>{alert.msg}</Alert>}
                                 <h1>Get in Touch</h1>
-                                <Form className="card-form">
+                                <Form className="card-form" onSubmit={handleSubmit}>
                                     <Form.Group>
-                                        <Form.Control type="name" placeholder="Name" required />
+                                        <Form.Control type="name" placeholder="Name" name="name" value={form.name} onChange={handleChange} required />
                                     </Form.Group>
                                     <Form.Group>
-                                        <Form.Control type="email" placeholder="Email" required />
+                                        <Form.Control type="email" placeholder="Email" name="email" value={form.email} onChange={handleChange} required />
                                     </Form.Group>
                                     <Form.Group>
-                                        <Form.Control type="number" placeholder="Phone Number" required />
+                                        <Form.Control type="number" placeholder="Phone Number" name="phoneNo" value={form.phoneNo} onChange={handleChange} required />
                                     </Form.Group>
                                     <Form.Group>
-                                        <Form.Control type="country" placeholder="Your Country" required />
+                                        <Form.Control type="country" placeholder="Your Country" name="country" value={form.country} onChange={handleChange} required />
                                     </Form.Group>
                                     <Form.Group>
-                                        <Form.Control as="textarea" name="description" rows={3} placeholder="Description" />
+                                        <Form.Control as="textarea" name="description" rows={3} placeholder="Description" value={form.description} onChange={handleChange} required />
                                     </Form.Group>
                                     <div className="mt-3">
-                                        <Button type="Submit" bsPrefix="contact-submit-btn">Submit</Button>
+                                        <Button type="Submit" bsPrefix="contact-submit-btn" disabled={isLoading}>Submit</Button>
                                     </div>
                                 </Form>
                             </Card.Body>

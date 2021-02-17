@@ -11,7 +11,7 @@ function ProductDevPage() {
     return <main>
         <Banner smallHeading="Product Dev"
             bigHeading="Software Product Development"
-            text="Give your business vision a life, turn it into a reality. TatvaSoft offers an intuitive and design-led engineering product service to accelerate software product innovation and deliver a superior customer experience." />
+            text="Give your business vision a life, turn it into a reality. HorizonSoft offers an intuitive and design-led engineering product service to accelerate software product innovation and deliver a superior customer experience." />
         <TotalSummarySec />
         <section className="section-pad">
             <div className="section-heading">

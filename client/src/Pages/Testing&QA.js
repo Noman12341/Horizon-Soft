@@ -38,17 +38,17 @@ function TestingAndQA() {
                     </Col>
                     <Col lg={4}>
                         <BigTile svg="/static/icons/compatibility_testing.svg"
-                            title="Compatibility Testing" text="Explore the possibilities of compatibility testing with TatvaSoft where an application is tested meticulously across different browsers, databases, hardware, server infrastructures, resolution displays and devices. " />
+                            title="Compatibility Testing" text="Explore the possibilities of compatibility testing with HorizonSoft where an application is tested meticulously across different browsers, databases, hardware, server infrastructures, resolution displays and devices. " />
                     </Col>
                     <Col lg={4}>
                         <BigTile svg="/static/icons/mobile_app_testing.svg"
-                            title="Mobile App Testing" text="Scalability, security and multi-platform support are the cornerstones of a mobile app. TatvaSoft provides cross platform, functional/non-functional testing with manual as well as automated approach for diverse mobile applications." />
+                            title="Mobile App Testing" text="Scalability, security and multi-platform support are the cornerstones of a mobile app. HorizonSoft provides cross platform, functional/non-functional testing with manual as well as automated approach for diverse mobile applications." />
                     </Col>
                 </Row>
             </Container>
         </section>
-        <TechStack />
         <JoinUs />
+        <TechStack />
         <WhyChoose />
         <ContactUs />
     </main>

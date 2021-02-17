@@ -20,7 +20,7 @@ function WebAppPage() {
     return <main>
         <Banner smallHeading="Website"
             bigHeading="Web Application Development"
-            text="Your custom business ideas demand highly responsive web experience. TatvaSoft's bold approach assists clients right from analysing disruptive B2B or B2C challenges to creating an intuitive UI/UX, fully functional, and powerful web technology solution." />
+            text="Your custom business ideas demand highly responsive web experience. HorizonSoft's bold approach assists clients right from analysing disruptive B2B or B2C challenges to creating an intuitive UI/UX, fully functional, and powerful web technology solution." />
         <TotalSummarySec />
         <section className="section-pad">
             <div className="section-heading">
@@ -31,7 +31,7 @@ function WebAppPage() {
                 <Row>
                     <Col lg={4}>
                         <BigTile svg="/static/icons/front-end-development.svg"
-                            title="Front-endWeb Development" text="Utilize the reusable components and deliver component-driven architecture using React.js, Angular, Vue.js. TatvaSoft is a web application development company that combines the amazing UI designs with required functionalities effortlessly." />
+                            title="Front-endWeb Development" text="Utilize the reusable components and deliver component-driven architecture using React.js, Angular, Vue.js. HorizonSoft is a web application development company that combines the amazing UI designs with required functionalities effortlessly." />
                     </Col>
                     <Col lg={4}>
                         <BigTile svg="/static/icons/back-end-development.svg"
