@@ -100,7 +100,7 @@ function ContactUsPage() {
                                 <p>Sub branch of HorizonSoft</p>
                                 <h4><span><FaPhone /></span> +40750866075</h4>
                                 <h4><span><FaEnvelope /></span> mfaisal902@gmail.com</h4>
-                                <h4><span><FaMapMarkerAlt /></span> House No: DG 752, Street No: 2, Defence Colory KRL Road khana pull rawal pindi</h4>
+                                <h4><span><FaMapMarkerAlt /></span> Bucuresti Spi, Indepenentei, Nr .290 BL .P27  AP .135 S. 6 DREPT DE MUNCA</h4>
                             </div>
                         </div>
                     </Col>
