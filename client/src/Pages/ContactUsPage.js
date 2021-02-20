@@ -86,9 +86,9 @@ function ContactUsPage() {
                         <div style={{ border: "2px solid #eee", padding: "20px" }}>
                             <h3>Pakistan</h3>
                             <div className="footer-contact">
-                                <p>Any thing we can write here !</p>
-                                <h4><span><FaPhone /></span> +40750866075</h4>
-                                <h4><span><FaEnvelope /></span> someOne@gmail.com</h4>
+                                <p>Main Branch of HorzonSoft</p>
+                                <h4><span><FaPhone /></span> +92 3495060721</h4>
+                                <h4><span><FaEnvelope /></span> mfaisal902@gmail.com</h4>
                                 <h4><span><FaMapMarkerAlt /></span> House No: DG 752, Street No: 2, Defence Colory KRL Road khana pull rawal pindi</h4>
                             </div>
                         </div>
@@ -97,9 +97,9 @@ function ContactUsPage() {
                         <div style={{ border: "2px solid #eee", padding: "20px" }}>
                             <h3>Romania</h3>
                             <div className="footer-contact">
-                                <p>Any thing we can write here !</p>
+                                <p>Sub branch of HorizonSoft</p>
                                 <h4><span><FaPhone /></span> +40750866075</h4>
-                                <h4><span><FaEnvelope /></span> someOne@gmail.com</h4>
+                                <h4><span><FaEnvelope /></span> mfaisal902@gmail.com</h4>
                                 <h4><span><FaMapMarkerAlt /></span> House No: DG 752, Street No: 2, Defence Colory KRL Road khana pull rawal pindi</h4>
                             </div>
                         </div>

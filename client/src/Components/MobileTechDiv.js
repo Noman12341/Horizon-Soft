@@ -8,7 +8,7 @@ function MobileAppDiv({ title, text, logos, points }) {
                 <h3 className="mob-tec-title">{title}</h3>
                 <p>{text}</p>
                 <ul className="mob-tec-logo">
-                    {logos.map((l, i) => <li><Image className="d-block" src={l.icon} height="55" /><span>{l.name}</span></li>)}
+                    {logos.map((l, i) => <li key={i}><Image className="d-block" src={l.icon} height="55" /><span>{l.name}</span></li>)}
                 </ul>
             </Col>
             <Col lg={4}>

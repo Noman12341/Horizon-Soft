@@ -70,11 +70,31 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   background-color: #fff;
 }
 .after-scroll-nav .nav-link::before{
-  background-color: #000;
+  background-color: #096bd8;
 }
 #nav .nav-link:hover::before{
   width: 100%;
   transition: width .5s;
+}
+@media screen and (max-width: 960px ){
+  .before-scroll-nav {
+    background-color: #fff;
+  }
+  #nav .nav-link::before{
+    content: none;
+  }
+  #nav .nav-link {
+    color: #000!important;
+  }
+  #nav .nav-link:hover {
+    color: #096bd8!important;
+  }
+  .contact-link {
+    margin-bottom: 20px;
+  }
+  .ser-drop-down:focus .ser-drop-down-cont {
+    display: block;
+  } 
 }
 /* .active-nav {
   color: #096bd8!important;
@@ -82,6 +102,7 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
 .ser-drop-down {
   position: relative;
   transition: all .3s;
+  cursor: pointer;
 }
 .ser-drop-down-cont {
   background-color: #fff;
@@ -131,8 +152,10 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   opacity: 0.7;
 }
 .banner-container {
-  padding: 200px 0 0 40px;
+  /* padding: 200px 0 0 40px; */
   position: absolute;
+  bottom: 10%;
+  left: 40px;
   max-width: 840px;
 }
 .banner-title {
@@ -1040,7 +1063,7 @@ box-shadow: 0px 18px 11px -1px rgba(89,89,89,0.4);
   padding:200px 50px 50px;
   background: url(./Images/contact-page-img.jpg);
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 .contact-container::before {
